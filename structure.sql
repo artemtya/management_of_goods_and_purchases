@@ -69,9 +69,9 @@ CREATE TABLE `stock` (
 CREATE TABLE `suppliers` (
   `suppliers_id` int NOT NULL AUTO_INCREMENT,
   `contract` int NOT NULL,
-  `suppliers_name` varchar(45) NOT NULL,
-  `suppliers_phone` varchar(20) NOT NULL,
-  `suppliers_address` varchar(45) NOT NULL,
+  `suppliers_name` varchar(45),
+  `suppliers_phone` varchar(20),
+  `suppliers_address` varchar(45),
   `start_date` date NOT NULL,
   `end_date` date DEFAULT NULL,
   PRIMARY KEY (`suppliers_id`),
