@@ -88,20 +88,20 @@
 
 **Вкладка Товары**
 
-![image](https://github.com/user-attachments/assets/ddba8a03-e6e6-4d61-8fa0-bc554d022f6f)
+![image](https://github.com/user-attachments/assets/2c5a00c7-8f29-4f86-ac32-2cbe2507856f)
 
 Здесь пользователь может: добавить, удалить или редактировать товар
 
 **Вкладка Закупки**
 
-![image](https://github.com/user-attachments/assets/e90c176a-7ee3-4332-960a-b94f062b6a35)
+![image](https://github.com/user-attachments/assets/1e8459e9-4fdc-4485-8190-fd2457a2a068)
 
 На этой вкладке пользователь может: создавать, удалять или изменять закупки
 
 **Вкладка Поставщики**
 
 
-![image](https://github.com/user-attachments/assets/16f9e4a5-eb0c-48b1-b84f-87baae942567)
+![image](https://github.com/user-attachments/assets/afc88a37-a6b2-418f-bca2-a3fe0879557f)
 
 
 Здесь пользователь может: добавлять, удалять или изменять данные о поставщиках
