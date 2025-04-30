@@ -4,8 +4,6 @@ CREATE TABLE `contracts` (
   `contract_name` varchar(45) NOT NULL,
   PRIMARY KEY (`contract_id`)
 ) 
-
-
 CREATE TABLE `products` (
   `products_id` int NOT NULL AUTO_INCREMENT,
   `products_name` varchar(45) NOT NULL,
@@ -17,7 +15,6 @@ CREATE TABLE `products` (
   KEY `fk_suppliers_products_idx` (`suppliers_id`),
   CONSTRAINT `fk_suppliers_products` FOREIGN KEY (`suppliers_id`) REFERENCES `suppliers` (`suppliers_id`)
 ) 
-
 CREATE TABLE `purchases` (
   `purchases_id` int NOT NULL AUTO_INCREMENT,
   `suppliers_id` int NOT NULL,
@@ -25,16 +22,19 @@ CREATE TABLE `purchases` (
   `purchases_user_id` int NOT NULL,
   `purchases_quantity` int NOT NULL,
   `purchases_date` date NOT NULL,
-  `purchases_total_price` int NOT NULL,
-  `unit_price` int NOT NULL,
+  `purchases_total_price` decimal(10,0) NOT NULL,
+  `unit_price` decimal(10,0) NOT NULL,
   `status` int NOT NULL,
   PRIMARY KEY (`purchases_id`),
   KEY `user_id_idx` (`purchases_user_id`),
   KEY `fk_purchases_purchases_status_idx` (`status`),
+  KEY `fk_purchases_sp_idx` (`suppliers_id`),
+  KEY `fk_purchases_prod_idx` (`products_id`),
+  CONSTRAINT `fk_purchases_product` FOREIGN KEY (`products_id`) REFERENCES `products` (`products_id`),
   CONSTRAINT `fk_purchases_purchases_status` FOREIGN KEY (`status`) REFERENCES `purchases_status` (`purchases_status_id`),
+  CONSTRAINT `fk_purchases_suppliers` FOREIGN KEY (`suppliers_id`) REFERENCES `suppliers` (`suppliers_id`),
   CONSTRAINT `user_id` FOREIGN KEY (`purchases_user_id`) REFERENCES `users` (`users_id`)
 ) 
-CREATE TABLE `purchases_status` (
   `purchases_status_id` int NOT NULL AUTO_INCREMENT,
   `purchases_status_name` varchar(45) NOT NULL,
   PRIMARY KEY (`purchases_status_id`)
